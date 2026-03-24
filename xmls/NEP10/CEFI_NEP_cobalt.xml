@@ -57,7 +57,7 @@ frecheck -v -r restart -p ncrc6.intel23 -t repro  -x CEFI_NEP_cobalt.xml CEFI_NE
   <property name="ICEPACK_GIT_TAG" value="Icepack1.3.3"/>
 
   <!-- customize as needed -->
-  <property name="FRE_STEM" value="fre/cefi/NEP/2025_06_ifx"/>
+  <property name="FRE_STEM" value="fre/cefi/NEP/2025_06"/>
 
   <!-- Please make sure to change your group, such as b, f, g, m, o... -->
   <!-- NCRC_GROUP will only have impact for your root dir and work dir on gaea c5/c6-->
@@ -857,8 +857,7 @@ endif
         <!-- Main settings -->
         <dataSource site="ncrc">$(NEP_WORLD)/mask_tables/mask_table.216.20x56</dataSource>
         <dataSource site="ncrc">$(NEP_WORLD)/mask_tables/mask_table.524.32x80</dataSource>
-        <!-- <dataSource site="ncrc">$(NEP_WORLD)/MOM_input</dataSource> --> 
-        <dataSource site="ncrc">/gpfs/f5/cefi/scratch/Utheri.Wagura/CEFI-regional-MOM6/xmls/NEP10/MOM_inputs/2024_08/MOM_input</dataSource>
+        <dataSource site="ncrc">$(NEP_WORLD)/MOM_input</dataSource>
         <!-- Initial conditions -->
         <dataSource site="ncrc">$(NEP_WORLD)/inits/glorys/nep_10km_init_1993-01-01_glorys.nc</dataSource>
 	<dataSource site="ncrc">$(NEP_WORLD)/inits/bgc/bgc_ics_75z.nc</dataSource>

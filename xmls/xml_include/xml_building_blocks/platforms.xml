@@ -1,6 +1,6 @@
 <freInclude xmlns:xi="http://www.w3.org/2003/XInclude">
   <!-- C5 platforms -->
-  <platform name="c5-common"> 
+  <platform name="c5-common">
     <project>$(NCRC_GROUP_C5)</project>
     <directory stem="$(FRE_STEM)">
       <root>/gpfs/f5/$(project)/scratch/$USER/$(stem)</root>
