@@ -346,7 +346,7 @@ AH_VEL_SCALE = 0.01             !   [m s-1] default = 0.0
                                 ! scaled viscosity, the Smagorinsky and Leith viscosities, and AH.
 FRICTWORK_BUG = True            !   [Boolean] default = False
                                 ! If true, retain an answer-changing bug in calculating the FrictWork, which
-                                ! cancels the h in thickness flux and the h at velocity point. This isnot
+                                ! cancels the h in thickness flux and the h at velocity point. This is not
                                 ! recommended.
 
 ! === module MOM_vert_friction ===
