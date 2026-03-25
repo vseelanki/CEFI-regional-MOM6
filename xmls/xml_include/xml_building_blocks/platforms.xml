@@ -128,7 +128,15 @@
     <xi:include xpointer="xpointer(//freInclude/platform[@name='gfdl.default']/node())" />
   </platform>
 
+  <platform name="gfdl.ncrc5-intel25">
+    <xi:include xpointer="xpointer(//freInclude/platform[@name='gfdl.default']/node())" />
+  </platform>
+
   <platform name="gfdl.ncrc6-intel23">
+    <xi:include xpointer="xpointer(//freInclude/platform[@name='gfdl.default']/node())" />
+  </platform>
+
+  <platform name="gfdl.ncrc6-intel25">
     <xi:include xpointer="xpointer(//freInclude/platform[@name='gfdl.default']/node())" />
   </platform>
 
