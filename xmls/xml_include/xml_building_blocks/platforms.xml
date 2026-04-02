@@ -1,7 +1,6 @@
 <freInclude xmlns:xi="http://www.w3.org/2003/XInclude">
-  <platform name="ncrc5.intel23">
-    <freVersion>$(FRE_VERSION)</freVersion>
-    <compiler type="intel-classic" version="2023.2.0"/>
+  <!-- C5 platforms -->
+  <platform name="c5-common">
     <project>$(NCRC_GROUP_C5)</project>
     <directory stem="$(FRE_STEM)">
       <root>/gpfs/f5/$(project)/scratch/$USER/$(stem)</root>
@@ -34,9 +33,21 @@
       $(append_to_setup_csh)
     ]]></csh>
   </platform>
-  <platform name="ncrc6.intel23">
+
+  <platform name="ncrc5.intel23">
     <freVersion>$(FRE_VERSION)</freVersion>
     <compiler type="intel-classic" version="2023.2.0"/>
+    <xi:include xpointer="xpointer(//freInclude/platform[@name='c5-common']/node())" />
+  </platform>
+
+  <platform name="ncrc5.intel25">
+    <freVersion>$(FRE_VERSION)</freVersion>
+    <compiler type="intel-oneapi" version="2025.2"/>
+    <xi:include xpointer="xpointer(//freInclude/platform[@name='c5-common']/node())" />
+  </platform>
+
+  <!-- C6 platforms -->
+  <platform name="c6-common">
     <project>$(NCRC_GROUP)</project>
     <directory stem="$(FRE_STEM)">
       <root>/gpfs/f6/$(project)/scratch/$USER/$(stem)</root>
@@ -69,6 +80,20 @@
       $(append_to_setup_csh)
     ]]></csh>
   </platform>
+
+  <platform name="ncrc6.intel23">
+    <freVersion>$(FRE_VERSION)</freVersion>
+    <compiler type="intel-classic" version="2023.2.0"/>
+    <xi:include xpointer="xpointer(//freInclude/platform[@name='c6-common']/node())" />
+  </platform>
+
+  <platform name="ncrc6.intel25">
+    <freVersion>$(FRE_VERSION)</freVersion>
+    <compiler type="intel-oneapi" version="2025.2"/>
+    <xi:include xpointer="xpointer(//freInclude/platform[@name='c6-common']/node())" />
+  </platform>
+ 
+  <!-- GFDL platforms -->
   <platform name="gfdl.default">
     <freVersion>$(FRE_VERSION)</freVersion>
     <project>$(GFDL_GROUP)</project>
@@ -98,10 +123,21 @@
     ]]>
     </csh>
   </platform>
+
   <platform name="gfdl.ncrc5-intel23">
     <xi:include xpointer="xpointer(//freInclude/platform[@name='gfdl.default']/node())" />
   </platform>
+
+  <platform name="gfdl.ncrc5-intel25">
+    <xi:include xpointer="xpointer(//freInclude/platform[@name='gfdl.default']/node())" />
+  </platform>
+
   <platform name="gfdl.ncrc6-intel23">
     <xi:include xpointer="xpointer(//freInclude/platform[@name='gfdl.default']/node())" />
   </platform>
+
+  <platform name="gfdl.ncrc6-intel25">
+    <xi:include xpointer="xpointer(//freInclude/platform[@name='gfdl.default']/node())" />
+  </platform>
+
 </freInclude>
